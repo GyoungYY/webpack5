@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-02-01 19:45:47
- * @LastEditTime: 2021-02-02 14:40:47
+ * @LastEditTime: 2021-02-02 15:15:14
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \webpack5\webpack.config.js
@@ -13,6 +13,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCssAssetsWebpackPlugin = require('optimize-css-assets-webpack-plugin');
 const TerserWebpackPlugin = require('terser-webpack-plugin');
+const { VueLoaderPlugin } = require('vue-loader/dist/index');
 
 module.exports = {
     mode: 'development',
@@ -29,6 +30,18 @@ module.exports = {
     },
     module: {
         rules: [
+            {
+                test: /\.vue$/,
+                use: [
+                    'vue-loader'
+                ]
+            },
+            {
+                test: /\.ts$/,
+                use: [
+                    'ts-loader'
+                ]
+            },
             {
                 test: /\.js$/,
                 use: {
@@ -124,7 +137,8 @@ module.exports = {
         new OptimizeCssAssetsWebpackPlugin(),
         new MiniCssExtractPlugin({
             filename: 'css/[name].css'
-        })
+        }),
+        new VueLoaderPlugin()
     ],
     optimization: {
         minimize: true,

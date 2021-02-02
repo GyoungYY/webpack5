@@ -1,8 +1,8 @@
 <!--
  * @Author: your name
  * @Date: 2021-02-01 19:41:16
- * @LastEditTime: 2021-02-02 14:48:04
- * @LastEditors: your name
+ * @LastEditTime: 2021-02-02 15:39:20
+ * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \webpack5\README.md
 -->
@@ -41,4 +41,13 @@ npm install terser-webpack-plugin -D
 #### 压缩图片
 npm install image-webpack-loader -D
 
+### 集成 TypeScript
+npm install typescript ts-loader -D
+tsc --init
 
+### 识别 .vue文件
+npm install vue@next -S
+npm install vue-loader@next @vue/compiler-sfc
+
+### 集成 Vue-Router
+npm install vue-router@4 -S
