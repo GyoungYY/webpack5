@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-02-01 19:41:16
- * @LastEditTime: 2021-02-02 15:39:20
+ * @LastEditTime: 2021-02-02 17:35:30
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \webpack5\README.md
@@ -51,3 +51,8 @@ npm install vue-loader@next @vue/compiler-sfc
 
 ### 集成 Vue-Router
 npm install vue-router@4 -S
+
+### 集成 Vuex
+npm install vuex@next -S
+
+
